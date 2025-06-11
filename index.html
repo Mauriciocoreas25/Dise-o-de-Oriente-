@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Súper La Canasta</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mini Súper La Canasta</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li class="cart-icon-container">
+                        <a href="#carrito" id="openCart">🛒 Carrito (<span id="cart-count">0</span>)</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>¡Tu tienda de confianza para el día a día!</h2>
+                <p>Frescura y variedad en cada visita.</p>
+                <a href="#productos" class="btn">Explora Nuestros Productos</a>
+            </div>
+        </section>
+
+        <section id="productos" class="products">
+            <div class="container">
+                <h3>Nuestros Productos</h3>
+                <div class="product-grid" id="product-list">
+                    </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h3>Contáctanos</h3>
+                <p>¡Estamos aquí para servirte!</p>
+                <form>
+                    <input type="text" placeholder="Tu Nombre">
+                    <input type="email" placeholder="Tu Correo">
+                    <textarea placeholder="Tu Mensaje"></textarea>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mini Súper La Canasta. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>🛒 Tu Carrito de Compras</h2>
+            <div id="cart-items">
+                <p class="empty-cart-message">El carrito está vacío.</p>
+            </div>
+            <div class="cart-summary">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+            </div>
+            <button id="checkout-button" class="btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-payment-button">&times;</span>
+            <h2>💳 Realizar Pago</h2>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="card-number">Número de Tarjeta:</label>
+                    <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" required maxlength="19">
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Nombre en la Tarjeta:</label>
+                    <input type="text" id="card-name" placeholder="Como aparece en la tarjeta" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Fecha de Vencimiento (MM/AA):</label>
+                    <input type="text" id="expiry-date" placeholder="MM/AA" required maxlength="5">
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" placeholder="XXX" required maxlength="4">
+                </div>
+                <p class="payment-note">El pago se procesará a través de un proveedor seguro.</p>
+                <div class="payment-link-container">
+                    <p>Botón que redirige a una pasarela de pago segura.</p>
+                    <a href="https://ejemplo.com/tu-pasarela-de-pago" target="_blank" class="btn pay-button">
+                        Pagar con Tarjeta de Crédito
+                    </a>
+                    <p class="small-text">Pago seguro a traves de  Wompi!</p>
+                </div>
+
+                <button type="button" id="simulate-payment" class="btn"> Pago Completado</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

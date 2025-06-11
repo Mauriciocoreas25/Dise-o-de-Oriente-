@@ -1,0 +1,475 @@
+/* Paleta de Colores Verde */
+:root {
+    --color-verde-claro: #E8F5E9; /* Verde muy pálido/menta, casi blanco */
+    --color-verde-medio: #A5D6A7; /* Verde suave */
+    --color-verde-fuerte: #4CAF50; /* Verde vibrante, para contraste */
+    --color-verde-oscuro: #2E7D32; /* Verde oscuro, para texto y elementos importantes */
+    --color-texto-oscuro: #1B5E20; /* Tono de verde muy oscuro para buena legibilidad */
+    --color-texto-claro: #fff;
+    --color-fondo-general: #F1F8E9; /* Blanco muy suave o crema para el fondo principal */
+}
+
+/* Fuentes */
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-general);
+}
+
+h1, h2, h3 {
+    font-family: 'Pacifico', cursive; /* Fuente más decorativa para títulos */
+    color: var(--color-verde-oscuro);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--color-verde-medio);
+    color: var(--color-texto-oscuro);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--color-verde-oscuro);
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: var(--color-texto-oscuro);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--color-texto-claro);
+}
+
+/* Botón de Carrito en el Header */
+.cart-icon-container {
+    margin-left: auto; /* Empuja el carrito a la derecha */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--color-verde-fuerte), var(--color-verde-medio));
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: inset 0 -3px 5px rgba(0,0,0,0.1);
+}
+
+.hero h2 {
+    color: var(--color-texto-claro);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-texto-claro);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--color-verde-fuerte);
+    transform: translateY(-2px);
+}
+
+/* Products Section */
+.products {
+    padding: 50px 0;
+    background-color: var(--color-fondo-general);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--color-texto-claro); /* Blanco para la tarjeta */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para los iconos de productos */
+.product-icon {
+    font-size: 4rem; /* Tamaño grande para los iconos en la tarjeta */
+    margin-bottom: 10px;
+    line-height: 1; /* Para que no afecte el espaciado vertical */
+    color: var(--color-verde-fuerte); /* Color para los iconos */
+}
+
+.product-card h4 {
+    color: var(--color-verde-oscuro);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 15px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: var(--color-verde-fuerte);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact {
+    background: var(--color-verde-claro);
+    padding: 50px 0;
+    color: var(--color-texto-oscuro);
+}
+
+.contact h3 {
+    color: var(--color-verde-oscuro);
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    padding: 12px;
+    border: 1px solid var(--color-verde-medio);
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    background-color: var(--color-texto-claro);
+    color: var(--color-texto-oscuro);
+}
+
+.contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact .btn {
+    align-self: flex-start;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Carrito Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Permanece en su lugar */
+    z-index: 1000; /* Se sitúa encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar scroll si es necesario */
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente oscuro */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+}
+
+.modal-content {
+    background-color: var(--color-fondo-general);
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    max-width: 600px; /* Ancho máximo para el modal */
+    width: 90%; /* Ancho responsivo */
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button, .close-payment-button {
+    color: var(--color-verde-oscuro);
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus,
+.close-payment-button:hover,
+.close-payment-button:focus {
+    color: var(--color-verde-fuerte);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--color-verde-medio);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--color-verde-claro);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.product-icon-cart {
+    font-size: 2rem; /* Tamaño más pequeño para los iconos en el carrito */
+    margin-right: 10px;
+    line-height: 1;
+    color: var(--color-verde-fuerte); /* Color para los iconos */
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h5 {
+    margin: 0 0 5px 0;
+    color: var(--color-verde-oscuro);
+    font-size: 1rem;
+}
+
+.item-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-texto-oscuro);
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-quantity button {
+    background-color: var(--color-verde-medio);
+    color: var(--color-texto-oscuro);
+    border: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item-quantity button:hover {
+    background-color: var(--color-verde-claro);
+}
+
+.remove-item-btn {
+    background-color: #ff4d4d; /* Rojo para eliminar, se mantiene para una clara distinción */
+    color: var(--color-texto-claro);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item-btn:hover {
+    background-color: #cc0000;
+}
+
+.empty-cart-message {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-verde-oscuro);
+}
+
+#checkout-button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Payment Modal Specifics */
+#payment-modal .modal-content {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-verde-oscuro);
+}
+
+.form-group input {
+    width: calc(100% - 24px); /* Ancho completo menos padding */
+    padding: 12px;
+    border: 1px solid var(--color-verde-medio);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--color-texto-claro);
+    color: var(--color-texto-oscuro);
+}
+
+.payment-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.payment-link-container {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--color-verde-claro);
+    text-align: center;
+}
+
+.pay-button {
+    background-color: var(--color-verde-fuerte);
+    display: block; /* Para que ocupe todo el ancho */
+    margin: 15px auto;
+}
+
+.small-text {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+#simulate-payment {
+    background-color: var(--color-verde-claro);
+    color: var(--color-verde-oscuro);
+    border: 2px solid var(--color-verde-oscuro);
+    margin-top: 20px;
+}
+
+#simulate-payment:hover {
+    background-color: var(--color-verde-medio);
+    color: var(--color-texto-oscuro);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-quantity {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
